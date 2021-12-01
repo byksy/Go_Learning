@@ -1,2 +1,2 @@
 # Go_PathSeparator
-It is my learning progrom for Go language
+It is my learning program for Go language
