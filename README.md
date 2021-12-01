@@ -1,7 +1,7 @@
 # Go Learning
 It is my learning program for Go language
 
-## Shot Declaration For Go
+## Short Declaration For Go
 ```
 package main 
 func main() {
