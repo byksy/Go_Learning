@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"path"
+	"os"
 )
 
 //version:=0 DON'T DO
@@ -10,28 +10,13 @@ import (
 
 func main() {
 
-	//score := 0 DONT'
-	//var score int //already score=0
-	var dir, file string
+	fmt.Printf("%v#v\n", os.Args)
 
-	dir, file = path.Split("css/main.css")
+	fmt.Println("Path", os.Args[0])
+	fmt.Println("1st arguument:", os.Args[1])
+	fmt.Println("2nd argument:", os.Args[2])
+	fmt.Println("3rd argument:", os.Args[3])
 
-	fmt.Println("file:", file)
-	fmt.Println("dir:", dir)
-
-	/*If you want discarding dir info you can use discard character*/
-	// var file string
-	// _ , file = path.Split("css/main.css")
-	// fmt.Println ("file:",file)
-
-	//// Grouping declaration
-	// var (
-	// 	//related
-	// 	video string
-
-	// 	//closely related
-	// 	duration int
-	// 	current int
-	// )
+	fmt.Println("Number of items inside os.Args:", len(os.Args))
 
 }
