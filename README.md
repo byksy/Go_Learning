@@ -112,3 +112,18 @@ var r io.Reader         // reader
 var pos int             // position
 
 ```
+
+## TroubleShooting
+
+When you have more than one go module in your workspace, the VS Code shows "gopls requires a module at the root of your workspace." error.
+If that is the case, you can change go extension setting, in order to allow gopls to look for multiple modules in the workspace. To solve this, follow below steps.
+
+1 : Open Vscode, and then go to settings.
+
+2 : In the search bar , type gopls
+
+3 : Just below that you will find settings.json, click on that
+
+4 : Paste the below code their "gopls": { "experimentalWorkspaceModule": true, }
+
+5 : Save it and restart the Vscode, You are good to go now.
