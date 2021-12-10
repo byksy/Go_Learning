@@ -115,15 +115,17 @@ var pos int             // position
 
 ## TroubleShooting
 
-When you have more than one go module in your workspace, the VS Code shows "gopls requires a module at the root of your workspace." error.
+a. When you have more than one go module in your workspace, the VS Code shows "gopls requires a module at the root of your workspace." error.
 If that is the case, you can change go extension setting, in order to allow gopls to look for multiple modules in the workspace. To solve this, follow below steps.
 
-1 : Open Vscode, and then go to settings.
+	1 : Open Vscode, and then go to settings.
 
-2 : In the search bar , type gopls
+	2 : In the search bar , type gopls
 
-3 : Just below that you will find settings.json, click on that
+	3 : Just below that you will find settings.json, click on that
 
-4 : Paste the below code their "gopls": { "experimentalWorkspaceModule": true, }
+	4 : Paste the below code their "gopls": { "experimentalWorkspaceModule": true, }
 
-5 : Save it and restart the Vscode, You are good to go now.
+	5 : Save it and restart the Vscode, You are good to go now.
+b. When you use os.Args and build your code on .exe file such as greeter.exe (Sample: go build -o greeter.exe) you can pay attention the following issue.
+	When you change your code block in your file such as main.go, you should rebuild your code on .exe file for returning properly result.
