@@ -120,9 +120,8 @@ var pos int             // position
 
  Raw String Literal       |   String Literal
  -------------------------|---------------------
- multi-line				  |  single line
- -------------------------|---------------------
- not interpreted		  |  interpreted
+ multi-line		  |  single line
+ not interpreted	  |  interpreted
 
  ```
  var s string
