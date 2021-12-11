@@ -112,6 +112,64 @@ var r io.Reader         // reader
 var pos int             // position
 
 ```
+## Raw String Literal
+
+ TYPES
+ string   ->     "hi there" (string literal)
+ string   ->	 `hi there` (raw string literal)
+
+ Raw String Literal       |   String Literal
+ -------------------------|---------------------
+ multi-line				  |  single line
+ -------------------------|---------------------
+ not interpreted		  |  interpreted
+
+ ```
+ var s string
+	s = "How are you?"
+	s = `How are you?`
+	fmt.Println(s)
+
+	s = "<html>\n\t<body>\"Hello\"</body>\n</html>"
+	fmt.Println(s)
+
+	s = `
+	<html>
+		<body>"Hello"</body>
+	</html>`
+	fmt.Println(s)
+```
+## String Length
+
+Unicode characters can be 1 to 4 bytes each.
+
+name := "john"
+len(name) => 4
+name := "İnanç"
+len(name) => 7 ('İ' = 2 bytes, 'ç' = 2 bytes, the others are 1 bytes)
+
+When you want to learn exact length, you can import "unicode/utf8" package. And you shoul write your code as below.
+
+```
+package main
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
+
+func main() {
+
+	name := "İnanç"
+
+	fmt.Println(utf8.RuneCountInString(name))
+}
+
+```
+Result should be 5. 
+A rune can represent English and Non-English characters as well.
+
+
 
 ## TroubleShooting
 
