@@ -170,6 +170,29 @@ func main() {
 Result should be 5. 
 A rune can represent English and Non-English characters as well.
 
+## IOTA
+
+iota is a built-on constant generator which generates ever increasing numbers.
+
+Code example:
+
+```
+func main() {
+
+	const (
+		monday = iota
+		tuesday
+		wednesday
+		thursday
+		friday
+		saturday
+		sunday
+	)
+
+}
+
+```
+
 
 
 ## TroubleShooting
