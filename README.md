@@ -193,7 +193,40 @@ func main() {
 
 ```
 
+## Error Value
 
+Some functions returns error value, some functions do not. When a function returns an error you have to handle it.
+| Note: nil is equals to null.
+
+For example strconv.Iota never fails, so you have not to do error handling. It is used for integer to string conversion.
+Usage:
+```
+ func main () {
+	 s := strnconv.Itoa(42)
+	 fmt.Println(s)
+ }
+```
+However strconv.Aoti sometimes fails, so yu have to handle the error. This function is used for string to integer conversion. If the function returns success the error value is nil.
+Demonstration:
+
+```
+func Atoi (s string) (int, error)
+```
+
+## Error handling example
+
+```
+func main() {
+	age := os.Args[1]
+	
+	n, err := strconv.Atoi (age)
+	if err != nill {
+		fmt.Println ("ERRRO:",err)
+		return
+	}
+	fmt.Printlf("SUCCESS: Converted %q to %d.\n", age, n)
+}
+```
 
 ## TroubleShooting
 
