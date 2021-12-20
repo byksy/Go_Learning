@@ -221,11 +221,33 @@ func main() {
 	
 	n, err := strconv.Atoi (age)
 	if err != nill {
-		fmt.Println ("ERRRO:",err)
+		fmt.Println ("ERRROR:",err)
 		return
 	}
 	fmt.Printlf("SUCCESS: Converted %q to %d.\n", age, n)
 }
+```
+
+## Short If Usage
+
+Sample code :
+
+```
+n, err := strconv.Atoi("42")
+
+if (err == nil ){
+	fmt.Println("There was no error, n is ", n)
+}
+
+```
+
+Short if usage for the above code block:
+
+```
+if n, err := strconv.Atoi("42"); err == nil {
+	fmt.Println("There was no error, n is ", n)
+}
+
 ```
 
 ## TroubleShooting
