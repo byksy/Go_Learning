@@ -250,6 +250,33 @@ if n, err := strconv.Atoi("42"); err == nil {
 
 ```
 
+## Loop Statement
+ In Go, there is one loop statement, that is for loop.
+
+ The two for statements are equals each other.
+ First for loop statement:
+
+ ```
+ int sum 
+ for i=0 ; i<=5 ; i++ {
+
+	 sum += i
+
+ }
+```
+
+Second for loop statement:
+
+```
+ for {
+	 if i>5 {
+		 break
+	 }
+	 sum += i
+	 i++
+ }
+```
+
 ## TroubleShooting
 
 a. When you have more than one go module in your workspace, the VS Code shows "gopls requires a module at the root of your workspace." error.
