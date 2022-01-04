@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"math/rand"
+	"time"
 )
 
 // func main() {
@@ -86,19 +87,32 @@ import (
 // Nested Loop Example 2
 
 func main() {
-	words := strings.Fields("The crazy dog dance on the line")
+	//words := strings.Fields("The crazy dog dance on the line")
 
 	// for i := 0; i < len(words); i++ {
 	// 	fmt.Printf("#%-2d: %q\n", i+1, words[i])
 	// }
 	// With Range Statement
 
-	for i, v := range words {
-		fmt.Printf("#%-2d: %q\n", i+1, v)
-	}
+	// for i, v := range words {
+	// 	fmt.Printf("#%-2d: %q\n", i+1, v)
+	// }
 
 	// Also you can use blank-identifier for if you don't write the index variable
 	// for _, v := range words {
 	// 	fmt.Printf(" %q\n", v)
 	// }
+
+	// Random Usage
+
+	rand.Seed(time.Now().UnixNano())
+
+	//rand.Seed(100)
+	guess := 10
+	for n := 0; n != guess; {
+		n = rand.Intn(guess + 1)
+		fmt.Printf("%d ", n)
+	}
+	fmt.Println()
+
 }
