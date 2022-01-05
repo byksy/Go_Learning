@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+	"os"
+	"strings"
 )
 
 // func main() {
@@ -86,6 +86,8 @@ import (
 
 // Nested Loop Example 2
 
+const copus = "" + "lazy dog swim again and again and again"
+
 func main() {
 	//words := strings.Fields("The crazy dog dance on the line")
 
@@ -105,14 +107,26 @@ func main() {
 
 	// Random Usage
 
-	rand.Seed(time.Now().UnixNano())
+	// rand.Seed(time.Now().UnixNano())
 
-	//rand.Seed(100)
-	guess := 10
-	for n := 0; n != guess; {
-		n = rand.Intn(guess + 1)
-		fmt.Printf("%d ", n)
+	// //rand.Seed(100)
+	// guess := 10
+	// for n := 0; n != guess; {
+	// 	n = rand.Intn(guess + 1)
+	// 	fmt.Printf("%d ", n)
+	// }
+	// fmt.Println()
+
+	words := strings.Fields(copus)
+	query := os.Args[1:]
+
+	for _, q := range query {
+		for i, w := range words {
+			if strings.EqualFold(w,q)  {
+				fmt.Printf("#%-2d: %q\n", i+1, w)
+				break
+			}
+		}
 	}
-	fmt.Println()
 
 }
