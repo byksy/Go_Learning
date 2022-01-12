@@ -276,6 +276,16 @@ Second for loop statement:
 	 i++
  }
 ```
+## Arrays
+
+- Array is a collection of elements: It stores same type and the same number of the elements in contiguous memory locations.
+- You can access array elements using index expressions.
+- var name[length]elementType is syntax for a array. Also [length]elementType is the type of the array. Its length and its element type determine the type of the array as a whole.
+- You can use elipsis instead of the length.
+- You can specify the index positions of the elements by using the key elements .
+- Different types of arrays are neither comparable nor assignable.
+- An unnamed composite type's underlying type is itself!
+- Unnamed and named typed values are comparable if their underlying types are identical.
 
 ## TroubleShooting
 
