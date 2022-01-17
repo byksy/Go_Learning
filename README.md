@@ -303,3 +303,18 @@ If that is the case, you can change go extension setting, in order to allow gopl
 	5 : Save it and restart the Vscode, You are good to go now.
 b. When you use os.Args and build your code on .exe file such as greeter.exe (Sample: go build -o greeter.exe) you can pay attention the following issue.
 	When you change your code block in your file such as main.go, you should rebuild your code on .exe file for returning properly result.
+
+c. When you have an exception like the below, run the code.
+```
+go run main.go
+go : The term 'go' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ go run main.go
++ ~~
+    + CategoryInfo          : ObjectNotFound: (go:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+```
+Then please run the below code again in the terminal, and the problem have gone.
+```
+ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
+```
