@@ -8,7 +8,7 @@ const (
 	yearly = winter + summer
 )
 
-//test
+//test2
 func main() {
 
 	var books [yearly]string
