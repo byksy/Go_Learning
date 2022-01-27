@@ -286,7 +286,18 @@ Second for loop statement:
 - Different types of arrays are neither comparable nor assignable.
 - An unnamed composite type's underlying type is itself!
 - Unnamed and named typed values are comparable if their underlying types are identical.
-
+## Slices
+- An usage example of slice: 
+	```
+	grades := []float64{40,10,20,50,60,70}
+	newGrades := append([]float64(nil), grades...)
+	```
+- A nil slice doesn't hae a backing array but it has a slice header.
+- Slice operations are cheap:
+	- Slicing: Creates a new slice header.
+	- Assigning a slice to another slice or, passing it to a function: Only copies the slice header.
+	- Slice header has a fixed size and it doesn't change even if you've millions of elements.
+	- On the other hand, an array can be expensive. Assigning it or passing it to a function copies all the elements of it.
 ## TroubleShooting
 
 a. When you have more than one go module in your workspace, the VS Code shows "gopls requires a module at the root of your workspace." error.
