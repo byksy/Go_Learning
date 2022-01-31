@@ -298,6 +298,11 @@ Second for loop statement:
 	- Assigning a slice to another slice or, passing it to a function: Only copies the slice header.
 	- Slice header has a fixed size and it doesn't change even if you've millions of elements.
 	- On the other hand, an array can be expensive. Assigning it or passing it to a function copies all the elements of it.
+	- Don't forget the copy and make command for slices.
+
+## Files
+- ReadDir() returns []FileInfo values for each file in a given directory.
+
 ## TroubleShooting
 
 a. When you have more than one go module in your workspace, the VS Code shows "gopls requires a module at the root of your workspace." error.
