@@ -1,0 +1,25 @@
+C:\Go Learn\Go_Learning
+	.git/
+	06-variables/
+	07-printf/
+	08-numbers-and-strings/
+	10-constants/
+	11-if/
+	12-switch/
+	13-loops/
+	14-arrays/
+	15-project-retro-led-clock/
+	16-slices/
+	17-project-empty-file-finder/
+	Go_Learning_2/
+
+C:\Go Learn\Go_Learning\Go_Learning_2
+	Array/
+	Banger/
+	Fetch-the-files/
+	Keyed-Elements/
+	Moodly-2/
+	Multi-dimensional-array/
+	Unnamed-Types/
+	multi-dimensional-slices/
+
